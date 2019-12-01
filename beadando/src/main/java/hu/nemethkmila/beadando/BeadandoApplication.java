@@ -25,7 +25,7 @@ public class BeadandoApplication {
 
 	@RequestMapping(value = "/helloworld")
 	   public String hello() {
-		repository.save(new Konyv("tesztcim", "tesztszerzo", 16));
+		repository.save(new Konyv("tesztcim", "tesztszerzo"));
 		System.out.println("\nfindAll()");
 		repository.findAll().forEach(x -> System.out.println(x.toString()));
 		return "index";

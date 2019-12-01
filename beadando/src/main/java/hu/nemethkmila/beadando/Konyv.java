@@ -8,9 +8,8 @@ public class Konyv {
 	
   
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, unique = true)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
  
     @Column(nullable = false)
     private String cim;
@@ -18,8 +17,6 @@ public class Konyv {
     @Column(nullable = false)
     private String szerzo;
  
-    @Column(nullable = false)
-    private int ajanlottkorhatar;
     
    
     
@@ -27,18 +24,17 @@ public class Konyv {
     {
     }
     
-    public Konyv(String cim, String szerzo, int ajanlottkorhatar) {
+    public Konyv(String cim, String szerzo) {
         this.cim = cim;
         this.szerzo = szerzo;
-        this.ajanlottkorhatar = ajanlottkorhatar;
     }
     
     public String toString() {
-    	return id + ": " + cim + " " + szerzo + " " + ajanlottkorhatar + "ev " ;
+    	return id + ": " + cim + " " + szerzo;
     }
     
     public String getDetails()
     {
-    	return id + ";" + cim + ";" + szerzo + " " + ajanlottkorhatar + "ev " ;
+    	return id + ";" + cim + ";" + szerzo;
     }
 }

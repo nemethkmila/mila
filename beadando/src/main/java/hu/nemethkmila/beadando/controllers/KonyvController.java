@@ -15,10 +15,9 @@ public class KonyvController {
 	private JpaKonyvRepo repository;
 
 	@RequestMapping(value = "/rest/UjKonyv", method = RequestMethod.POST)
-	  public String ujKonyv(@RequestParam(value="cim", defaultValue="") String cim, @RequestParam(value="szerzo", defaultValue="") String szerzo, @RequestParam(value="ajanlottkorhatar", defaultValue="0") int ajanlottkorhatar) {
+	  public String ujKonyv(@RequestParam(value="cim", defaultValue="") String cim, @RequestParam(value="szerzo", defaultValue="") String szerzo) {
 		if(cim != "" && szerzo != "") {
-			System.out.println(ajanlottkorhatar);
-			Konyv ujkonyv = new Konyv(cim, szerzo, ajanlottkorhatar);
+			Konyv ujkonyv = new Konyv(cim, szerzo);
 			System.out.println(ujkonyv.getDetails());
 			repository.save(ujkonyv);
 			return "Konyv rogzitve";
