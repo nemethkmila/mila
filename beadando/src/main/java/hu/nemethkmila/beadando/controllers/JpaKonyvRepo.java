@@ -12,7 +12,7 @@ public interface JpaKonyvRepo extends CrudRepository<Konyv, Long> {
 	
 	public final static String GET_KONYV_BY_ID = "select et from Konyv et where ID = :id";
 
-    List<Konyv> findByName(String name);
+    List<Konyv> findByCim(String cim);
     
     @Query(GET_KONYV_BY_ID)
     Konyv findById(@Param("id") int id);

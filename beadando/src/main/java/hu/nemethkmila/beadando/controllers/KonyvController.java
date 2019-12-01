@@ -18,7 +18,6 @@ public class KonyvController {
 	  public String ujKonyv(@RequestParam(value="cim", defaultValue="") String cim, @RequestParam(value="szerzo", defaultValue="") String szerzo) {
 		if(cim != "" && szerzo != "") {
 			Konyv ujkonyv = new Konyv(cim, szerzo);
-			System.out.println(ujkonyv.getDetails());
 			repository.save(ujkonyv);
 			return "Konyv rogzitve";
 			}
@@ -34,7 +33,7 @@ public class KonyvController {
 	@RequestMapping("/rest/Polc")
 	  public String polc() {
 		String[] tmp= {""};
-		repository.findAll().forEach(x -> tmp[0]+=x.getDetails()+"\n");
+		repository.findAll().forEach(x -> tmp[0]+=x.toString()+"\n");
 		return tmp[0];
 	  }
 }

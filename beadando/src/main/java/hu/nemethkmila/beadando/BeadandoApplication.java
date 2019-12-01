@@ -22,12 +22,4 @@ public class BeadandoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BeadandoApplication.class, args);
 	}
-
-	@RequestMapping(value = "/helloworld")
-	   public String hello() {
-		repository.save(new Konyv("tesztcim", "tesztszerzo"));
-		System.out.println("\nfindAll()");
-		repository.findAll().forEach(x -> System.out.println(x.toString()));
-		return "index";
-	   }
 }

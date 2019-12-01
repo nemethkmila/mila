@@ -28,13 +28,4 @@ public class Konyv {
         this.cim = cim;
         this.szerzo = szerzo;
     }
-    
-    public String toString() {
-    	return id + ": " + cim + " " + szerzo;
-    }
-    
-    public String getDetails()
-    {
-    	return id + ";" + cim + ";" + szerzo;
-    }
 }
