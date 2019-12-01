@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import hu.szacs93.beadando.Etel;
+import hu.nemethkmila.beadando.Konyv;
 
 @RestController
 public class KonyvController {
 	
 	@Autowired
-	private JpaEtelRepo repository;
+	private JpaKonyvRepo repository;
 
 	@RequestMapping(value = "/rest/UjKonyv", method = RequestMethod.POST)
 	  public String ujKonyv(@RequestParam(value="cim", defaultValue="") String cim, @RequestParam(value="szerzo", defaultValue="") String szerzo, @RequestParam(value="ajanlottkorhatar", defaultValue="0") int ajanlottkorhatar) {

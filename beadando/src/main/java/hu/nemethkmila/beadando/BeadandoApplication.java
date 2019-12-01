@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import hu.szacs93.beadando.controllers.JpaEtelRepo;
+import hu.nemethkmila.beadando.controllers.JpaKonyvRepo;
 
 @SpringBootApplication
 @RestController

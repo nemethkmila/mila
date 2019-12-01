@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import hu.szacs93.beadando.Etel;
+import hu.nemethkmila.beadando.Konyv;
 
 import java.util.List;
 
