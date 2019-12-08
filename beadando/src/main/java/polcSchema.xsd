@@ -4,4 +4,6 @@
     			type="xs:string" />
 	<xs:element name="szerzo"
             	type="xs:string" />
+    <xs:element name="kiadaseve" 
+    			type="xs:int" />
 </xs:schema>

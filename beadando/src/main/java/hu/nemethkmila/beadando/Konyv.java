@@ -16,6 +16,9 @@ public class Konyv {
     
     @Column(nullable = false)
     private String szerzo;
+    
+    @Column(nullable = false)
+    private int kiadaseve;
  
     
    
@@ -24,13 +27,14 @@ public class Konyv {
     {
     }
     
-    public Konyv(String cim, String szerzo) {
+    public Konyv(String cim, String szerzo, int kiadaseve) {
         this.cim = cim;
         this.szerzo = szerzo;
+        this.kiadaseve = kiadaseve;
     }
     
-    public String ekrhghjergh()
+    public String fgv()
     {
-    	return this.cim + " " + this.szerzo;
+    	return this.cim + " " + this.szerzo + " " + this.kiadaseve +"<br>";
     }
 }
